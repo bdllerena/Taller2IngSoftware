@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EspePocket.Pages.MainPage"
+             xmlns:controls="clr-namespace:EspePocket.Pages;assembly=EspePocket"
+             Title="Inicio">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="OnDoneButtonClicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" Android="moon.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="38" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Source="fondo2.jpg" Aspect="AspectFill"/>
+        <BoxView Grid.Row="1" Color="#3A444D" />
+        <StackLayout Grid.Row="1" Spacing="0" Padding="0" HorizontalOptions="Center" VerticalOptions="End">
+            <Label  TextColor="White"  FontSize="Small" HorizontalTextAlignment="Center"  HorizontalOptions="Center" Text="Contacto: espepocketsoporte@gmail.com"/>
+            <Label  TextColor="White"  FontSize="Small" HorizontalTextAlignment="Center"  HorizontalOptions="Center" Text="EspePocket - 2017 "/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid Grid.Row="0" ColumnSpacing="10" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <controls:MainPageButton Grid.Row="0" Grid.Column="0" Icon="miespe.png"
+                                        Label="MiEspe">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MiEspe" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+
+            <controls:MainPageButton Grid.Row="0" Grid.Column="1" Icon="car.png"
+                                        Label="Carreras">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Carreras" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+            <controls:MainPageButton Grid.Row="0" Grid.Column="2" Icon="estudiar.png"
+                                        Label="Matriculación">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Matriculacion" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+            <controls:MainPageButton Grid.Row="1" Grid.Column="0" Icon="rules.png"
+                                        Label="Reglamento">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Reglamento" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+            <controls:MainPageButton Grid.Row="1" Grid.Column="1" Icon="utiles.png"
+                                        Label="CosasUtiles">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Utilidades" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+            <controls:MainPageButton Grid.Row="1" Grid.Column="2" Icon="brain.png"
+                                        Label="Preguntas Frecuentes">
+                <controls:MainPageButton.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Preguntas" />
+                </controls:MainPageButton.GestureRecognizers>
+            </controls:MainPageButton>
+        </Grid>
+        </StackLayout>
+    </Grid>
+    
+</ContentPage>
